@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card-wrapper">
+        <div id="title">TODO ++</div>
+        <div id="input">
+            <input type="text" name="val" id="val" placeholder="add a todo element">
+            <div id="btn" onclick="add(val.value); val.value = ''">add</div>
+        </div>
+        <div id="output">
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="utils.js"></script>
+</body>
+</html>

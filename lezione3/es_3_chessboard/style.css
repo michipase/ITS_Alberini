@@ -1,0 +1,75 @@
+*{
+    border: none;
+    padding: none;
+    margin: none;
+}
+
+.card{
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 20px;
+}
+
+#title{
+    display: block;
+    flex: 100%;
+    text-align: center;
+
+    font-size: x-large;
+    font-weight: 500;
+
+    height: 50px;
+}
+
+#input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 100%;
+    height: fit-content;
+}
+input{
+    border-bottom: solid 1px grey;
+}
+.btn{
+    border: solid 2px green;
+    color: green;
+
+    cursor: pointer;
+}
+#output{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 100%;
+
+    padding: 20px;
+
+    height: fit-content;
+}
+
+.row{
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cell{
+    display: block;
+    text-align: center;
+}
+
+.black{
+    background-color: black;
+    color: white
+}
+
+.white{
+    background-color: rgb(199, 197, 197);
+    color: black;
+}

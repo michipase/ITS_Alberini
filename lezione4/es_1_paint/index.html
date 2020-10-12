@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGAGGHIERA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div id="title">Scacchiera editor</div>
+        <div id="input">
+            <label for="row">rows:</label>
+            <input type="number" name="row" id="row">
+            <label for="col">columns:</label>
+            <input type="number" name="col" id="col">
+            <div class="btn success" onclick="draw(row.value,col.value)">draw</div>
+            <div class="btn error" onclick="draw(row.value,col.value)">reset</div>
+            <div class="colorPicker"></div>
+            <div>You selected:<span id="selection"></span></div> 
+        </div>
+        <div id="output">
+
+        </div>
+    </div>
+
+
+    <script src="utils.js"></script>
+</body>
+</html>

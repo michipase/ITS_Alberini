@@ -1,0 +1,125 @@
+*{
+    border: none;
+    padding: none;
+    margin: none;
+}
+
+html, body{
+    color: aliceblue;
+    background-color: black;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+#btn{
+    cursor: pointer;
+}
+
+.card-wrapper{
+    position: absolute;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border: solid 1px aliceblue;
+    border-radius: 5px;
+
+    width: 500px;
+
+    padding: 20px;
+}
+
+#title{
+    flex: 100%;
+
+    font-size: 30px;
+    height: fit-content;
+}
+
+#input{
+    flex: 100%;
+    display: flex;
+
+    font-size: 18px;
+    padding: 10px;
+}
+
+input{
+    flex: 80%;
+    border: none;
+    background: none;
+    color: aliceblue;
+
+    border-bottom: solid 1px white;
+    transition: all ease 250ms;
+}
+input:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+input:active, input:focus {
+    outline: none;
+    border-bottom: solid 2px green;
+    transition: all ease 250ms;
+}
+
+#btn {
+    flex: 20%;
+    border: solid 2px green;  
+    color: green;
+    text-align: center; 
+
+    transition: all ease 250ms;
+}
+
+#btn:hover{
+    background-color: green;
+    color: black;
+
+    transition: all ease 250ms;
+}
+
+#output{
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list-element{
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 10px;
+
+    min-height: 40px;
+
+    font-size: 22px;
+}
+
+.content{
+    flex: 90%;
+    background-color: rgba(255,255,255, 0.2);
+}
+.remove{
+    flex: 10%;
+    text-align: center;
+    font: 40px;
+    line-height: 40px;
+
+    color: red;
+
+    cursor: pointer;
+
+    transition: all ease 250ms;
+}
+
+.remove:hover{
+    background-color: red;
+    color: black;
+
+    transition: all ease 250ms;
+}
+
