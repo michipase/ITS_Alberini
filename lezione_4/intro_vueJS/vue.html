@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue introduction</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+
+        <button @click="btnClick">click</button>
+        <input type="text" name="nome" id="nome" @input="printNewName" v-model="message">
+
+    </div>
+    
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    message: 'place something here'
+                }
+            },
+            methods: {
+                btnClick: function() {
+                    this.message = "ciao";
+                },
+                printNewName(event) {
+                    console.log(event.target.value);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

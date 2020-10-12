@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue introduction</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome" v-model="name">
+        <button @click="saluta">saluta!</button>
+        <h1>{{message}}</h1>
+        
+
+    </div>
+    
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    message: undefined,
+                    name: undefined,
+                }
+            },
+            methods: {
+                saluta(event){
+                    this.message = 'Benvenuto ' + this.name + '!';
+                }
+            }
+        })
+    </script>
+</body>
+</html>
