@@ -6,6 +6,12 @@
     <title>Vue introduction</title>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        .selected {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -13,6 +19,11 @@
         <button @click="saluta">saluta!</button>
         <h1>{{message}}</h1>
         
+        <div :class = "{ 'selected' : selectedColor === 'red'}" @click="changeColor('red')">red</div>
+        <div :class = "{ 'selected' : selectedColor === 'green'}" @click = "changeColor('green')">green</div>
+        <div :class = "{ 'selected' : selectedColor === 'blue'}" @click = "changeColor('blue')">blue</div>
+
+        <h2>Il colore selezionato è {{this.selectedColor}}</h2>
 
     </div>
     
@@ -21,16 +32,23 @@
             el: "#app",
             data() {
                 return {
-                    message: undefined,
-                    name: undefined,
+                    message: '',
+                    name: '',
+                    selectedColor: '',
                 }
             },
             methods: {
                 saluta(event){
-                    this.message = 'Benvenuto ' + this.name + '!';
+                    if(this.name !== ''){
+                        this.message = 'Benvenuto ' + this.name + '!';
+                    }
+                },
+
+                changeColor(newColor) {
+                    this.selectedColor = newColor;
                 }
             }
-        })
-    </script>
+        });
+    </script>  
 </body>
 </html>

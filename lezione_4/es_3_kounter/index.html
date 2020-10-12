@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue introduction</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        .selected {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ num }}</h1>
+        <button @click="num++">+</button>
+        <button @click="num = 0">reset</button>
+        <button @click="num--">-</button>
+    </div>
+    
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    num: 0,
+                }
+            },
+            methods: {
+            }
+        });
+    </script>  
+</body>
+</html>
