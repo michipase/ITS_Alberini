@@ -19,7 +19,7 @@
                 <th>delete</th>
             </tr>
             <tr v-for="(elem, index) in list">
-                <td>{{ index }}</td>
+                <td>{{ index + 1 }}</td>
                 <td>{{ elem }}</td>
                 <td><button @click="del(index)">x</button></td>
             </tr>
