@@ -12,6 +12,7 @@ let app = new Vue({
         },
         del(x){
             this.list.splice(x,1);
+            this.newEl = '';
         }
     }
 });
