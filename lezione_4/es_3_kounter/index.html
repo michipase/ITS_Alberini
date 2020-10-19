@@ -11,14 +11,24 @@
         .selected {
             font-weight: bold;
         }
+
+        .card{
+            text-align: center;
+        }
+
+        h1{
+            font-size: 72px;
+        }
     </style>
 </head>
 <body>
     <div id="app">
-        <h1>{{ num }}</h1>
-        <button @click="num++">+</button>
-        <button @click="num = 0">reset</button>
-        <button @click="num--">-</button>
+        <div class="card">
+            <h1>{{ num }}</h1>
+            <button @click="num++">+</button>
+            <button @click="num = 0">reset</button>
+            <button @click="num--">-</button>
+        </div>
     </div>
     
     <script>

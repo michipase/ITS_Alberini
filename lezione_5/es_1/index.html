@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <h1>Ciao {{ name }}! {{ eta ? 'Oggi hai ' + eta + ' anni' : 'Quanti anni hai?'}}</h1>
+        <h2>{{figo === true ? 'sei un figo pazzesco ;)': 'non sei molto figo... :('}}</h2>
+
+        <label>Nome: </label>
+        <input type="text" name="name" id="name" v-model="name"><br>
+        
+        <label>Età: </label>
+        <input type="number" name="eta" id="eta" v-model="eta">
+        <input type="checkbox" name="figo" id="figo" v-model="figo">
+
+        <hr>
+        <button @click="stampaSaluto()">saluta pirla!</button>
+        <h1>{{ saluto }}</h1>
+
+    </div>
+    
+    <script type="text/javascript" src="utils.js"></script>
+</body>
+</html>
