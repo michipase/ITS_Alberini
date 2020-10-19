@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banana</title>
+    <title>V-IF</title>
     <link rel="stylesheet" href="style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -11,8 +11,11 @@
 </head>
 <body>
     <div id="app">
-        Sei maggiorenne? {{ isMaggiorenne }}
+        Sei maggiorenne? <br>
         <input type="checkbox" name="magg" id="magg" v-model="isMaggiorenne">
+
+        <div v-if="isMaggiorenne"> manda il tuo numero di cellulare a marvin.perini@gmail.com . Non te ne pentirai ;)</div>
+        <div v-if="!isMaggiorenne"> OH shit</div>
 
     </div>
     
