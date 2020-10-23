@@ -48,6 +48,9 @@
         <div v-if="archived.length > list.length">
             <strong>Continua così mr Dragonite!</strong>
         </div>
+
+        <button @click="save()">save</button>
+        <button @click="getTodo()">import</button>
     </div>
     
     <script type="text/javascript" src="utils.js"></script>
