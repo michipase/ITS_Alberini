@@ -35,8 +35,16 @@ let app = new Vue({
                 this.disable = true;
                 setTimeout(_ => {this.message = ''; this.disable = false}, 5000)
             } else {
-                
+
             }
         },
+        enterPress(e,data) {
+            if (e.keyCode === 13) {
+              this.push(data)
+            } else if (e.keyCode === 50) {
+              alert('@ was pressed');
+            }      
+            this.log += e.key;
+          },
     }
 });

@@ -14,7 +14,8 @@
         <h1>ToDoLista bella</h1>
         <div>
             <label>nuovo task:</label>
-            <input type="text" name="add" id="add" v-model="newEl"><button @click="push(newEl)" :disabled='newEl === ""'>pushalo</button>
+            <input type="text" name="add" id="add" v-model="newEl">
+            <button @click="push(newEl)"v-on:keyup="enterPress(newEl)" :disabled='newEl === ""'>pushalo</button>
             <br>
             <button @click="save()" :disabled = 'disable'>save</button>
             <button @click="getTodo()" :disabled = 'disable'>import</button>
