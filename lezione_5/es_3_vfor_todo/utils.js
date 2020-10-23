@@ -3,6 +3,7 @@ let app = new Vue({
     data() {
         return {
             list:[],
+            archived: [],
             newEl: '',
         }
     },
@@ -10,7 +11,8 @@ let app = new Vue({
         push(x){
             this.list.push(x);
         },
-        del(x){
+        archive(x){
+            this.archived.push(this.list[x]);
             this.list.splice(x,1);
             this.newEl = '';
         }
