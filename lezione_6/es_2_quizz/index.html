@@ -30,9 +30,7 @@
                 {{currentQuiz.quiz}}
             </div>
             
-            <pre>{{risposte}}</pre>
-            
-            <div class="answer-wrapp">
+            <div class="answer-wrapper">
                 <div class="answer" v-for="r in currentQuiz.choices">
                     
                     <input type="radio" name="risposta" :value="r.id" v-model="risposte[currentQuiz.id]">
