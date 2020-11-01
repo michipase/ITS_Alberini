@@ -124,6 +124,7 @@ let app = new Vue({
             this.risposte = {};
             this.currentQuizIndex = 0;
             this.currentView = 'quiz';
+            this.score = 0;
             
         }
     },

@@ -44,10 +44,12 @@
             <button id="next" class="movement-btn" @click="avanza()" :disabled = "canGoNext">{{nextButtonLabel}}</button>
         
         </div>
-        <div v-if="currentView === 'result'">
-            <h1>Congratz! hai completato il quiz!</h1>
-            <h1>Score: {{score}} / {{quizList.length}}</h1>
-            <button @click="newGame()">Gioca di Nuovo!</button>
+        <div class="score-page" v-if="currentView === 'result'">
+            <div class="text">
+                <h1>Congratz! hai completato il quiz!</h1>
+                <h1>Score: {{score}} / {{quizList.length}}</h1>
+                <div class="again" click="newGame()">Gioca di Nuovo!</div>
+            </div>
         </div>
     </div>
         
